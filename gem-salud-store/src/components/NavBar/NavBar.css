@@ -1,0 +1,41 @@
+.Navbar{
+    background-color: rgb(70, 150, 255);
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    z-index: 1000;
+}
+
+.ListItems{
+    list-style: none;
+    display:flex;
+    padding:10px;
+    margin:10px;
+    gap:15px;
+}
+
+.Toolbar{
+display:flex;
+min-height: 50px;
+align-items: center;
+padding: 0px 10px;
+}
+
+a{
+    color : #FFFFFF;
+    text-decoration: none;
+}
+
+.Logo{
+ margin-right: 10px;
+}
+
+.Title{
+    color:#FFFFFF;
+    flex-grow: 1;
+}
