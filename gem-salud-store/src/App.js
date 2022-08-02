@@ -1,4 +1,3 @@
-import logo from './components/logo/logo.png';
 import './App.css';
 import NavBar from "./components/NavBar/NavBar.js";
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
