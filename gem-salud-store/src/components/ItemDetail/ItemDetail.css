@@ -1,0 +1,22 @@
+.container{
+width:90%;
+margin:auto;
+}
+
+.detail{
+margin-top: 3rem;
+margin-bottom: 3rem;
+width:100%;
+display:flex;
+flex-wrap: wrap;
+}
+
+.detailImg{
+width: 100%;
+}
+
+.content{
+width:100%;
+
+}
+

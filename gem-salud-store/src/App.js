@@ -1,14 +1,16 @@
 import logo from './components/logo/logo.png';
 import './App.css';
 import NavBar from "./components/NavBar/NavBar.js";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+{/*import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";*/}
 
 
 function App() {
   return (
     <div className="App">
      <NavBar/>
-    <ItemListContainer section="Offers"/>
+    {/*<ItemListContainer section="Offers"/>*/}
+    <ItemDetailContainer/>
     </div>
   );
 }
