@@ -1,36 +1,31 @@
 import './NavBar.css';
 import '../logo/logo.png';
 import CartWidget from './CartWidget.js';
+import {Link} from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <div>
-        <header className ="Navbar">
-        <div className ="Toolbar">
-        <div className="Logo"><img className ='LogoBox' src={"../logo/logo.png"} alt="Logo GemSalud"/>
-        </div>
-        <div className="Title">Gem Salud Store</div>
-        <div>
-        <ul className="ListItems">
-        <li>
-        <a href="#Home">Home</a>
+        <div className='container'>
+        <nav>
+        <ul className="list">
+        <li className="list-items">
+        <Link to={'/'}>Home</Link>
         </li>
-        <li>
-        <a href="#Products">Products</a>
+        <li className="list-items">
+        <Link to={'/products'}>Products</Link>
         </li>
-        <li>
-        <a href="#About">About</a>
+        <li className="list-items">
+        <Link to={'/about'}>About</Link>
         </li>
-        <li>
-        <a href="#Login">Login</a>
+        <li className="list-items">
+        <Link to={'/login'}>Login</Link>
         </li>
-        <li>
-        <a href="#ShopCart"><CartWidget/></a>
+        <li className="list-items">
+        <Link to={'/cart'}>Shop Cart<CartWidget/>
+        </Link>
         </li>
         </ul>
-        </div>
-        </div>
-        </header>
+        </nav>
         </div>
     )
 }
