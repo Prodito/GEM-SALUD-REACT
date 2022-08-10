@@ -2,10 +2,10 @@ import './ItemProduct.css';
 
 const ItemProduct = ({title,price,img}) => {
     return(
-        <div className="Item-Product">
-        <img className="Img-Box" src={`./assets/${img}`} alt="Producto"/>
-        <p className="Product">{title}</p>
-        <span className="Price">${price}</span>
+        <div className="item-product">
+        <img className="img-box" src={`./assets/${img}`} alt="Producto"/>
+        <p className="item-product">{title}</p>
+        <span className="price">${price}</span>
         </div>
     );
 }
