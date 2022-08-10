@@ -1,15 +1,12 @@
 import './Item.css';
-import React,{useContext} from 'react';
-import { CartContext } from '../Context/CartContext';
-
+import React from 'react';
 
 const Item = ({info})=> {
-    const nombre = useContext(CartContext);
 return (
-    <a href='' className="SurgProducts"> 
+    <div>
     <img src={info.image} alt=""></img>
     <p>{info.title}</p>
-    </a>
+    </div>
 );
 }
 export default Item; 
