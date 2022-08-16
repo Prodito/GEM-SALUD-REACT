@@ -7,10 +7,15 @@ export const useCartContext = () => useContext(CartContext);
 const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
 
-    const addProduct = (item,newQuantity) => {
-        const newCart = cart.filter(product => product.id !== item.id);
-        newCart.push({...item,quantity: newQuantity});
-        setCart(newCart)
+    const addProduct = (item,quantity) => {
+        if(isInCart(item.id)){
+            setCart(cart.map(product => {
+                return product.id === item.id ? { ...product, quantity: product.quantity + quantity} : product
+
+            }));
+        } else {
+            setCart([...cart,{...item,quantity}]);
+        }
     }
 
     const clearCart = () => setCart([]); //limpiar carrito de compras
