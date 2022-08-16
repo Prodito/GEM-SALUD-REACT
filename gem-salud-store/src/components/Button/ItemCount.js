@@ -1,12 +1,11 @@
 import '../Button/ItemCount.css';
 import React,{useState,useEffect} from 'react';
 
-export const ItemCount =({stock,initial,onAdd})=>{
+export const ItemCount =({initial ,stock ,onAdd})=>{
     const [count,setCount] = useState(parseInt(initial));
 
     const increase = () => {
         setCount(count + 1)
-        
     }
 
     const decrease = () => {
@@ -15,7 +14,7 @@ export const ItemCount =({stock,initial,onAdd})=>{
 
     useEffect(() => {
         setCount(parseInt(initial));
-
+        
     },[initial])
 
     return(
