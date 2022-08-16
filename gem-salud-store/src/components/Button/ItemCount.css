@@ -1,0 +1,28 @@
+.counter-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.btn-dcr{
+    padding: 10px;
+    color: red;
+}
+
+.btn-inc{
+    padding: 10px;
+    color:green;
+}
+
+.btn-add{
+    color: black;
+    padding:10px 5px;
+
+}
+
+.avl {
+    color:black;
+    font-size: x-small;
+
+}

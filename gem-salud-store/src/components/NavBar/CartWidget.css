@@ -1,0 +1,12 @@
+.cart{
+    text-decoration: none;
+    color:black;
+    font-size: large;
+    border-radius: 10px;
+
+}
+
+.cart:hover, .cart_active {
+    background-color: white;
+    color: #000;
+    transition: 0.5s; }
