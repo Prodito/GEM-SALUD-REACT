@@ -18,6 +18,12 @@ const CartProvider = ({children}) => {
         }
     }
 
+    const totalPrice = () => {
+        return cart.reduce((prev, act) => prev + act.quantity * act.price, 0); //precio final
+    }
+
+    const totalProducts = () => cart.reduce((acm, currentProd) => acm + currentProd.quantity,0); //total de productos 
+
     const clearCart = () => setCart([]); //limpiar carrito de compras
 
     const isInCart = (id) => cart.find(product => product.id === id) ? true : false; //si esta el producto en el carrito
@@ -29,7 +35,11 @@ return (
         clearCart,
         isInCart,
         removeProd,
-        addProduct
+        addProduct,
+        totalPrice,
+        totalProducts,
+        cart
+
     }}>
         {children}
     </CartContext.Provider>
