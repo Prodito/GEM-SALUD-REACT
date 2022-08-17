@@ -6,7 +6,12 @@
 
 }
 
+.cart-tot{
+    gap:10px;
+}
+
 .cart:hover, .cart_active {
     background-color: white;
     color: #000;
     transition: 0.5s; }
+

@@ -1,10 +1,14 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import React from 'react';
+import { useCartContext } from '../../Context/CartContext';
 
-const CartWidget = () => {
+export const CartWidget = () => {
+    const {totalProducts} = useCartContext();
+
     return(
         <div className='cartwidget'>
             <ShoppingCartIcon className="cart" />
+            <span className='cart-tot'>{(totalProducts() || '')}</span>
         </div>
     )
 }

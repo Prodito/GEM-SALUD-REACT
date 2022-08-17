@@ -1,16 +1,13 @@
 .container {
-    width: 100%;
-    margin: auto;
+    display: flex;
     border-radius: 20px;
     border-style: solid;
+    align-self: center;
+    justify-content: center;
+
 }
 .detail{
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    width: 100%;
-    display:flex;
-    flex-wrap: wrap;
-
+    width: 50%;
 }
 .detail-img{
     margin: 40px;
