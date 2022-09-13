@@ -14,9 +14,9 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    <Container maxWidth='1x'>
     <CartProvider>
     <NavBar/>
+    <Container maxWidth='1x' sx={{padding:5}} >
     <Routes>
     <Route path='/' element={<ItemListContainer />} />
     <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
@@ -25,8 +25,8 @@ function App() {
     <Route path='/cart' element={<Cart/>} />
     {/*<Route path='/login' element={< />} />*/}
     </Routes>
-    </CartProvider>
     </Container>
+    </CartProvider>
     </BrowserRouter>
     </>
   );
