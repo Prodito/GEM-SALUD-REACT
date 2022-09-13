@@ -1,5 +1,9 @@
 import '../Button/ItemCount.css';
 import React,{useState,useEffect} from 'react';
+import { IconButton } from '@mui/material';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
 
 export const ItemCount =({initial ,stock ,onAdd})=>{
     const [count,setCount] = useState(parseInt(initial));
@@ -18,15 +22,19 @@ export const ItemCount =({initial ,stock ,onAdd})=>{
     },[initial])
 
     return(
-        <div className='counter-box'>
-        <button className='btn-dcr' disabled={count <= 1} onClick={decrease}>-</button>
+        <>
+        <IconButton disabled={count <= 1} onClick={decrease} size = 'large'>
+        <RemoveIcon/>
+        </IconButton>
         <span>{count}</span>
-        <button className='btn-inc' disabled={count >= stock} onClick={increase}>+</button>    
-        <div className='counter-box-low'>
-        <button className='btn-add' disabled = {stock <= 0} onClick={()=> onAdd(count)}>Add to Cart</button>
+        <IconButton disabled={count >= stock} onClick={increase} size = 'large' >
+        <AddIcon/>
+        </IconButton>    
+        <IconButton color="primary" aria-label="add to shopping cart" sx={{ fontSize: 200 }} disabled = {stock <= 0} onClick={()=> onAdd(count)}>
+        <AddShoppingCartIcon />
+        </IconButton>    
         <p className='avl'>{stock} Disponibles</p>
-        </div>
-        </div>
+        </>
     );
 }
 

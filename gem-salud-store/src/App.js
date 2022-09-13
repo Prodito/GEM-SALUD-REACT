@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import CartProvider from './Context/CartContext';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-
+import { Container } from '@mui/system';
 
 
 
@@ -14,6 +14,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
+    <Container maxWidth='1x'>
     <CartProvider>
     <NavBar/>
     <Routes>
@@ -25,6 +26,7 @@ function App() {
     {/*<Route path='/login' element={< />} />*/}
     </Routes>
     </CartProvider>
+    </Container>
     </BrowserRouter>
     </>
   );
